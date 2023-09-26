@@ -1,15 +1,12 @@
-import { useCallback, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import dangoLogo from "../../assets/logo-violeta.png"
 import style from "./Navbar.module.css"
 import { AiOutlineShoppingCart } from "react-icons/ai"
 
-// #333
 
 export default function Navbar({setShowCart, showCart, products}) {
-    
     const [scroll, setScroll] = useState(false)
-
-
+    
     useEffect(() => {
         window.addEventListener("scroll", () => {
             if (window.scrollY > 0) {
@@ -17,6 +14,7 @@ export default function Navbar({setShowCart, showCart, products}) {
             } else setScroll(false)
         })
     }, [])
+
     return (
         <>
             <nav className={style.nav} style={scroll ? { backgroundColor: "#ffffff", boxShadow: "0px 2px 4px #5c1dff" } : {}}>

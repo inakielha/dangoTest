@@ -1,7 +1,5 @@
 import { useState } from "react"
 import style from "./Card.module.css"
-import { AiOutlineEdit } from "react-icons/ai"
-import RangeFont from "./rangeFont/RangeFont"
 
 export default function Card({ img, title, price, setTotalCart, id, totalCart }) {
     const [fontSize, setFontSize] = useState(18); // Initial font size
