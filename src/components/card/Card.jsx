@@ -29,7 +29,6 @@ export default function Card({ img, title, price, setTotalCart, id, totalCart })
         value = value.replace('-', '');
         setAmount(value)
         let newArr = [...totalCart]
-        console.log(value, id)
         if(value == 0){
             newArr[id] = ""
             

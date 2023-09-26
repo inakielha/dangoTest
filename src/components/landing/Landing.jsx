@@ -9,7 +9,6 @@ export default function Landing({ totalCart, setTotalCart, setShowCart, showCart
         return totalCart.reduce((accumulator, currentValue) => {
           if (currentValue) {
             let productCost = parseInt(currentValue.amount) * parseInt(currentValue.price)
-            console.log(productCost)
             return accumulator + parseInt(productCost);
           }
           return accumulator; // Es importante incluir un valor de retorno aquí si currentValue no cumple la condición.
