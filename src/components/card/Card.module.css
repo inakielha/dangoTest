@@ -1,0 +1,96 @@
+.cardSection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    padding: 1em 0;
+}
+
+.infoContainer {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.imgContainer {
+    width: 100%;
+    height: 150px;
+}
+
+.imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title {
+    padding: 2em 0;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: inherit;
+    font-size: 1rem;
+    resize: none;
+    overflow: hidden;
+}
+
+.icon {
+    cursor: pointer;
+
+    padding: 0 1em;
+}
+
+.cartContainer {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+}
+
+.price {
+    color: #000;
+    font-weight: bold;
+}
+
+.amount {
+    border: 2px solid grey;
+    padding: 0 1em;
+    padding: 0;
+    width: 20%;
+    text-align: center;
+}
+
+.description {
+    color: rgb(143, 138, 138);
+    width: 100%;
+}
+
+.cardSection button {
+    background-color: rgb(223, 174, 223);
+    border: 1.5px solid #000;
+    padding: 0.5em 0.8em;
+    cursor: pointer;
+}
+
+.cardSection button:hover {
+    opacity: 0.7;
+}
+
+.link {
+    cursor: pointer;
+    border-bottom: 1px solid #000000a2;
+    font-size: 0.8rem;
+}
+
+.link:hover {
+    /* background-color: rgb(238, 187, 238); */
+    color: rgb(238, 187, 238);
+    border-bottom: 1px solid rgb(238, 187, 238);
+}

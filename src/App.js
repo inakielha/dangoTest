@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar/Navbar';
+import Landing from './components/landing/Landing';
+import { useCallback, useState } from 'react';
+
 
 function App() {
+  const [totalCart, setTotalCart] = useState([])
+  const [showCart, setShowCart] = useState(false)
+
+  const products = useCallback(() => {
+    return totalCart.reduce((accumulator, currentValue) => {
+      if (currentValue) {
+        return accumulator + parseInt(currentValue.amount);
+      }
+      return accumulator; // Es importante incluir un valor de retorno aquí si currentValue no cumple la condición.
+    }, 0); // 0 es el valor inicial del acumulador
+  }, [totalCart]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar setShowCart={setShowCart} showCart={showCart} products={products}/>
+      <Landing totalCart={totalCart} setTotalCart={setTotalCart} showCart={showCart} setShowCart={setShowCart} products={products}/>
+    </>
   );
 }
 
